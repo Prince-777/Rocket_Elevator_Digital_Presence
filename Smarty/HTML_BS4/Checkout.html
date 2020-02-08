@@ -237,9 +237,9 @@
 
 					<section>
 
-						<input type="radio" name="gender" value="male"> Standard<br>
-						<input type="radio" name="gender" value="female"> Premium<br>
-						<input type="radio" name="gender" value="other"> Excelium
+						<input type="radio" name="gender" value="0"> Standard<br>
+						<input type="radio" name="gender" value="1"> Premium<br>
+						<input type="radio" name="gender" value="2"> Excelium
 					</section>
 
 
@@ -260,20 +260,21 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="col-md-12" id="residental_1" ­>
-										<label for="contact:name">How many appartments ?*   <input required type="number" value="" class="form-control" name="contact[name][required]"
-											id="numAppartements_res"></label>
+										<label for="contact:name">How many appartments ?*</label>
+										<input onchange="costUpdateResidental()" type="number" value="" class="form-control" name="contact[name][required]"
+											id="numAppartements_res">
 										
 									</div>
 			
 									<div class="col-md-12" id="residental_2">
 										<label for="contact:name"> How many floors ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUpdateResidental()" type="number" value="" class="form-control" name="contact[name][required]"
 											id="numFloors_res">
 									</div>
 			
 									<div class="col-md-12" id="residental_3">
 										<label for="contact:name">How many basements ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUpdateResidental()" type="number" value="" class="form-control" name="contact[name][required]"
 											id="numBasements_res">
 									</div>
 
@@ -283,19 +284,19 @@
 								<div class="col-md-6">
 									<div class="col-md-12" id="residental_4">
 										<label for="contact:name">The number of elevator you need ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
 											id="res_num_elev" disabled>
 									</div>
 			
 									<div class="col-md-12" id="residental_5">
 										<label for="contact:name">Price of an elevator ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
 											id="res_num_price1" disabled>
 									</div>
 			
 									<div class="col-md-12" id="residental_6">
 										<label for="contact:name">Installation cost$ ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
 											id="res_num_price2" disabled>
 									</div>
 			
@@ -310,7 +311,7 @@
 						
 						<div class="col-md-12" id="residental_7">
 							<label for="contact:name">Total cost $?*</label>
-							<input required type="number" value="" class="form-control" name="contact[name][required]"
+							<input  type="number" value="" class="form-control" name="contact[name][required]"
 								id="res_num_price3" disabled>
 						</div>
 
@@ -322,32 +323,32 @@
 								<div class="col-md-6">
 									<div class="col-md-12" id="commercial_1">
 										<label for="contact:name">How many distinct business in the building ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUpdateCommercial()" type="number" value="" class="form-control" name="contact[name][required]"
 											id="numBussiness_comm">
 									</div>
 			
 			
 									<div class="col-md-12" id="commercial_2">
 										<label for="contact:name">How many floors ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUpdateCommercial()" type="number" value="" class="form-control" name="contact[name][required]"
 											id="numFloors_comm">
 									</div>
 			
 									<div class="col-md-12" id="commercial_3">
 										<label for="contact:name">How many basements ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUpdateCommercial()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numBasements_comm">
 									</div>
 			
 									<div class="col-md-12" id="commercial_4">
 										<label for="contact:name">How many parking spaces ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUpdateCommercial()" type="number" value="" class="form-control" name="contact[name][required]"
 											id="numParking_comm">
 									</div>
 			
 									<div class="col-md-12" id="commercial_5">
 										<label for="contact:name">How many elevator cages to be deployed ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUpdateCommercial()" type="number" value="" class="form-control" name="contact[name][required]"
 											id="numElevators_comm">
 									</div>
 
@@ -357,25 +358,25 @@
 								<div class="col-md-6">
 									<div class="col-md-12" id="commercial_6">
 										<label for="contact:name">The number of elevator you need?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
 											id="comm_num_elev" disabled>
 									</div>
 			
 									<div class="col-md-12" id="commercial_7">
 										<label for="contact:name">Price of an elevator $?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
 											id="comm_num_price1" disabled> 
 									</div>
 			
 									<div class="col-md-12" id="commercial_8">
 										<label for="contact:name">Installation cost$ ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
 											id="comm_num_price2" disabled>
 									</div>
 			
 									<div class="col-md-12" id="commercial_9">
 										<label for="contact:name">Total cost$ ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
 											id="comm_num_price3" disabled>
 									</div>
 
@@ -395,31 +396,31 @@
 								<div class="col-md-6">
 									<div class="col-md-12" id="corporate_1">
 										<label for="contact:name">How many separate tenant companies ? *</label>
-										<input onclick="costUptadeCorporate()" required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onclick="costUptadeCorporate()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numTenant_corp">
 									</div>
 			
 									<div class="col-md-12" id="corporate_2">
 										<label for="contact:name">How many floors ?*</label>
-										<input onchange="costUptadeCorporate()" required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeCorporate()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numFloors_corp">
 									</div>
 			
 									<div class="col-md-12" id="corporate_3">
 										<label for="contact:name">How many basements ? *</label>
-										<input onchange="costUptadeCorporate()" required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeCorporate()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numBasements_corp">
 									</div>
 			
 									<div class="col-md-12" id="corporate_4">
 										<label for="contact:name">How many parking spaces ?*</label>
-										<input onchange="costUptadeCorporate()" required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeCorporate()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numParking_corp">
 									</div>
 			
 									<div class="col-md-12" id="corporate_5">
 										<label for="contact:name">Maximum number of occupants per floor ?*</label>
-										<input onchange="costUptadeCorporate()" required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeCorporate()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numRenters_corp">
 									</div>
 
@@ -429,27 +430,27 @@
 								<div class="col-md-6">
 									<div class="col-md-12" id="corporate_6">
 										<label for="contact:name">The number of elevator you need ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
 											id="corp_num_elev" disabled>
 									</div>
 									<hr> <hr> <hr> 
 									
 									<div class="col-md-12" id="corporate_7">
 										<label for="contact:name">Price of an elevator ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
-											id="corp_num_price1">
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
+											id="corp_num_price1" disabled>
 									</div>
 			
 									<div class="col-md-12" id="corporate_8">
 										<label for="contact:name">Installations cost ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
-											id="corp_num_price2">
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
+											id="corp_num_price2" disabled>
 									</div>
 			
 									<div class="col-md-12" id="corporate_9">
 										<label for="contact:name">Total cost ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
-											id="corp_num_price3">
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
+											id="corp_num_price3" disabled>
 									</div>
 
 
@@ -467,37 +468,37 @@
 								<div class="col-md-6">
 									<div class="col-md-12" id="hybrid_1">
 										<label for="contact:name"> How many distinct business in the building ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeHybrid()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numBussiness_hybr">
 									</div>
 			
 									<div class="col-md-12" id="hybrid_2">
 										<label for="contact:name">How many floors ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeHybrid()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numFloors_hybr">
 									</div>
 			
 									<div class="col-md-12" id="hybrid_3">
 										<label for="contact:name">How many basements ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeHybrid()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numBasements_hybr">
 									</div>
 			
 									<div class="col-md-12" id="hybrid_4">
 										<label for="contact:name">How many parking spaces ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeHybrid()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numParking_hybr">
 									</div>
 			
 									<div class="col-md-12" id="hybrid_5">
 										<label for="contact:name">Maximum number of occupants per floor ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeHybrid()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numRenters_hybr">
 									</div>
 			
 									<div class="col-md-12" id="hybrid_6">
 										<label for="contact:name">Hours of activity per day ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
+										<input onchange="costUptadeHybrid()"  type="number" value="" class="form-control" name="contact[name][required]"
 											id="numRenters_hybr">
 									</div>
 
@@ -505,29 +506,29 @@
 								</div>
 								<hr> <hr><hr>
 								<div class="col-md-6">
-									<div class="col-md-12" id="hybrid_6">
+									<div class="col-md-12" id="hybrid_7">
 										<label for="contact:name">The number of elevator you need ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
-											id="hybrid_num_elev">
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
+											id="hybrid_num_elev" disabled>
 									</div>
 									<hr> <hr> <hr> 
 									
-									<div class="col-md-12" id="hybrid_7">
-										<label for="contact:name">Price of an elevator ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
-											id="hybrid_num_price1">
-									</div>
-			
 									<div class="col-md-12" id="hybrid_8">
-										<label for="contact:name">Installations cost ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
-											id="hybrid_num_price2">
+										<label for="contact:name">Price of an elevator ?*</label>
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
+											id="hybrid_num_price1" disabled>
 									</div>
 			
 									<div class="col-md-12" id="hybrid_9">
+										<label for="contact:name">Installations cost ?*</label>
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
+											id="hybrid_num_price2" disabled>
+									</div>
+			
+									<div class="col-md-12" id="hybrid_10">
 										<label for="contact:name">Total cost ?*</label>
-										<input required type="number" value="" class="form-control" name="contact[name][required]"
-											id="hybrid_num_price3">
+										<input  type="number" value="" class="form-control" name="contact[name][required]"
+											id="hybrid_num_price3" disabled>
 									</div>
 
 
@@ -722,41 +723,40 @@
 
 	function costUpdateResidental() {
 
-		var res_num_elev = document.getElementById("res_num_elev").value;
-		console.log("res_num_elev: " + res_num_elev);
-		var res_num_price1 = document.getElementById("res_num_price1").value;
-		var res_num_price2 = document.getElementById("res_num_price2").value;
-		var res_num_price3 = document.getElementById("res_num_price3").value;
-
+		var numAppartements_res = +document.getElementById("numAppartements_res").value;
+		var numFloors_res  = +document.getElementById("numFloors_res").value;
+		var numBasements_res = +document.getElementById("numBasements_res").value;
+		
 		var moyenne = Math.ceil(numAppartements_res / numFloors_res);
-		console.log("moyenne: " + moyenne);
 		var nbr_ascenseur = Math.ceil(moyenne / 6);
-		console.log("nbr assc: " + nbr_ascenseur);
 		var nbr_colonne = Math.ceil(numFloors_res / 20);
-		console.log("nbr_colonne: " + nbr_colonne);
 		var nbr_total_asc = Math.ceil(nbr_colonne * nbr_ascenseur);
-		console.log("nbr_total_asc: " + nbr_total_asc);
+		
+		document.getElementById("res_num_elev").value = nbr_total_asc;
+		document.getElementById("res_num_price1").value = nbr_total_asc * 7565;
+		document.getElementById("res_num_price2").value = nbr_total_asc * 7565 *.10;
+		document.getElementById("res_num_price3").value = nbr_total_asc * 7565 + nbr_total_asc * 7565 *.10;
 
-		document.getElementById("res_num_price1").value = res_num_elev * 7565;
-		document.getElementById("res_num_price2").value = (res_num_elev * 7565) * 0.10;
-		document.getElementById("res_num_price3").value = (res_num_elev * 7565 * 0, 10);
-
-		console.log()
+		
 
 	}
 
 	function costUpdateCommercial() {
 
 
-		var comm_num_elev = document.getElementById("comm_num_elev").value;
-		var comm_num_price1 = document.getElementById("comm_num_price1").value;
-		var comm_num_price2 = document.getElementById("comm_num_price2").value;
-		var comm_num_price3 = document.getElementById("comm_num_price3").value;
+		var numBussiness_comm = +document.getElementById("numBussiness_comm").value;
+		var numFloors_comm = +document.getElementById("numFloors_comm").value;
+		var numBasements_comm = +document.getElementById("numBasements_comm").value;
+		var numParking_comm = +document.getElementById("numParking_comm").value;
+		var numElevators_comm = +document.getElementById("numElevators_comm").value;
+		
+		
+		
 
-
-		document.getElementById("comm_num_price1").value = comm_num_elev * 7565;
-		document.getElementById("comm_num_price2").value = (comm_num_elev * 7565) * 0.10;
-		document.getElementById("comm_num_price3").value = (comm_num_elev * 7565 * 0, 10);
+		document.getElementById("comm_num_elev").value = numElevators_comm;
+		document.getElementById("comm_num_price1").value =( numElevators_comm * 7565);
+		document.getElementById("comm_num_price2").value = (numElevators_comm * 7565 * 0.10);
+		document.getElementById("comm_num_price3").value = parseInt(numElevators_comm * 7565 + numElevators_comm  * 7565 * 0.10).toFixed(2);
 
 
 
@@ -769,41 +769,36 @@
 		var numParkCorp = +document.getElementById("numParking_corp").value;
 		var numRentCorp = +document.getElementById("numRenters_corp").value;
 
-/*
-		var corp_num_elev = +document.getElementById("corp_num_elev").value;
-		var numFloors_corp = +document.getElementById("numFloors_corp").value;
-		var numBasements_corp = document.getElementById("numBasements_corp").value;
-		var corp_num_price3 = document.getElementById("corp_num_price3").value;
-*/
 		var A1 = Math.ceil(numFloorsCorp + numBaseCorp);
-		var A2 = Math.ceil(numTenantCorp);
+		var A2 = Math.ceil(A1 * numRentCorp / 1000);
 		var A3 = Math.ceil(A1 / 20);
 		var A4 = Math.ceil(A2 / A3);
-		var A5 = Math.ceil(A4 / A3);
+		var A5 = Math.ceil(A4 * A3);
 
-		document.getElementById("corp_num_elev").value = A3;
-		document.getElementById("corp_num_price2").value = 3 * 7565;
-		document.getElementById("corp_num_price3").value = 4 * 7565;
-
-
+		document.getElementById("corp_num_elev").value = parseInt(A5);
+		document.getElementById("corp_num_price1").value = parseInt(A5 * 7565).toFixed(2);
+		document.getElementById("corp_num_price2").value = parseInt(A5 * 7565 * 0.10).toFixed(2);
+		document.getElementById("corp_num_price3").value = parseInt(A5 * 7565 + A5 * 7565 * 0.10).toFixed(2);
 
 	}
 	function costUptadeHybrid() {
 
-		var hybr_num_elev = document.getElementById("hybr_num_elev").value;
-		var hybr_num_price1 = document.getElementById("hybr_num_price1").value;
-		var hybr_num_price2 = document.getElementById("hybr_num_price2").value;
-		var hybr_num_price3 = document.getElementById("hybr_num_price3").value;
+		var numBussiness_hybr = +document.getElementById("numBussiness_hybr").value;
+		var numFloors_hybr = +document.getElementById("numFloors_hybr").value;
+		var numBasements_hybr = +document.getElementById("numBasements_hybr").value;
+		var numParking_hybr = +document.getElementById("numParking_hybr").value;
+		var numRenters_hybr = +document.getElementById("numRenters_hybr").value;
 
 		var B1 = Math.ceil(numFloors_hybr + numBasements_hybr);
 		var B2 = Math.ceil(B1 * numRenters_hybr / 1000);
 		var B3 = Math.ceil(B1 / 20);
 		var B4 = Math.ceil(B2 / B3);
-		var B5 = Math.ceil(B4 / B3);
+		var B5 = Math.ceil(B4 * B3);
 
-		document.getElementById("hybr_num_price1").value = hybr_num_elev * 7565;
-		document.getElementById("hybr_num_price2").value = (hybr_num_elev * 7565) * 0.10;
-		document.getElementById("hybr_num_price3").value = (hybr_num_elev * 7565 * 0, 10);
+		document.getElementById("hybrid_num_elev").value = parseInt(B5);
+	    document.getElementById("hybrid_num_price1").value = parseInt(A5 * 7565).toFixed(2);
+		document.getElementById("hybrid_num_price2").value = parseInt(A5 * 7565 * 0.10).toFixed(2);
+		document.getElementById("hybrid_num_price3").value = parseInt(A5 * 7565 + A5 * 7565 * 0, 10).toFixed(2);
 
 		console.log()
 
